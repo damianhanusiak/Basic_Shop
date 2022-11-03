@@ -4,6 +4,10 @@ class Basket {
 		this.totalValue = 0;
 	}
 
+	clear() {
+		this.items.length = 0;
+	}
+
 	add(item) {
 		this.items.push(item);
 		this.addToTotalValue(item.price);
@@ -18,10 +22,12 @@ class Basket {
 	}
 
 	getBasketSummary() {
-		return this.items.map(
-			(product, i) =>
-				`${i + 1} - ${product.name} - ${product.price.toFixed(2)} zł.`
-		);
+		return this.items.map((product, i) => {
+			return {
+				id: i + 1,
+				text: `${i + 1} - ${product.name} - ${product.price.toFixed(2)} zł.`,
+			};
+		});
 	}
 
 	remove(no) {
