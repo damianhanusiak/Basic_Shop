@@ -18,7 +18,7 @@ const createBasketUi = () => {
 		const newLi = document.createElement("li");
 		newLi.textContent = oneProductInfo.text;
 		newLi.addEventListener("click", removeItem);
-		newLi.dataset.id = "xyz xyz xyz";
+		newLi.dataset.id = oneProductInfo.id;
 		basketUl.append(newLi);
 	}
 
