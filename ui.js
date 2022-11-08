@@ -53,3 +53,5 @@ for (const btn of buyBtns) {
 }
 
 buyAllBtn.addEventListener("click", buyAllProducts);
+
+createBasketUi();
